@@ -8,13 +8,9 @@ export default function Navbar() {
         <nav
             style={{
                 position: 'fixed',
-                bottom: 0,
+                bottom: 20,
                 left: '50%',
                 transform: 'translateX(-50%)',
-                background: 'white',
-                padding: '0.5em 2em',
-                borderRadius: '12px',
-                boxShadow: '0 -2px 10px rgba(0,0,0,0.1)',
                 display: 'flex',
                 gap: '2em',
                 zIndex: 1000,
@@ -24,7 +20,7 @@ export default function Navbar() {
                 to="/"
                 style={{
                     textDecoration: 'none',
-                    color: location.pathname === '/' ? 'blue' : 'black',
+                    color: location.pathname === '/' ? 'white' : 'black',
                 }}
             >
                 Home
@@ -33,10 +29,10 @@ export default function Navbar() {
                 to="/about"
                 style={{
                     textDecoration: 'none',
-                    color: location.pathname === '/about' ? 'blue' : 'black',
+                    color: location.pathname === '/about' ? 'white' : 'black',
                 }}
             >
-                About
+                Sobre
             </Link>
         </nav>
     );

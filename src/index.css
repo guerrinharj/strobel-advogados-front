@@ -12,3 +12,26 @@ body {
     position: relative;
     padding-bottom: 60px; /* space for nav bar */
 }
+
+
+
+/* Thin black scrollbar */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 1px;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: black transparent;
+}
