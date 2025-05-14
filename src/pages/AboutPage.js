@@ -59,7 +59,7 @@ export default function AboutPage() {
 
                 {/* Text on bottom (mobile) or right (desktop) */}
                 <div style={{ maxWidth: '600px' }}>
-                    <h1 style={{ fontSize: isMobile ? '20px' : '34px', marginBottom: '0.5em' }}>
+                    <h1 style={{ fontSize: isMobile ? '20px' : '34px', marginBottom: '0.5em', textDecoration: 'underline' }}>
                         Isabelle Strobel
                     </h1>
 

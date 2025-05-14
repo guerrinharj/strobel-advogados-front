@@ -34,6 +34,15 @@ export default function Navbar() {
             >
                 Sobre
             </Link>
+            <Link
+                to="/areas-de-atuacao"
+                style={{
+                    textDecoration: 'none',
+                    color: location.pathname === '/about' ? 'white' : 'black',
+                }}
+            >
+                Atuação
+            </Link>
         </nav>
     );
 }

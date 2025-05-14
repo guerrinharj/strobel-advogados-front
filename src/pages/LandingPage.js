@@ -37,7 +37,7 @@ export default function LandingPage() {
                     ease: "easeInOut",
                 }}
             />
-                <h1>Strobel Advogados</h1>
+                <h1>Strobel Advocacia</h1>
             </div>
         </motion.div>
     );
