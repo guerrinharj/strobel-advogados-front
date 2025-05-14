@@ -5,6 +5,8 @@ body {
     font-family: 'Helvetica', sans-serif;
     color: black;
     letter-spacing: -1px;
+    overflow: hidden;
+    height: 100vh
 }
 
 .app {
@@ -14,24 +16,14 @@ body {
 }
 
 
-
-/* Thin black scrollbar */
+/* Hide scrollbar on WebKit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-    width: 1px;
-    height: 1px;
-}
-
-::-webkit-scrollbar-track {
+    width: 0px;
     background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 1px;
-}
-
-/* Firefox */
+/* Hide scrollbar on Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: black transparent;
+    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none; /* for Internet Explorer/Edge Legacy */
 }

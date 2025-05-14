@@ -6,10 +6,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function LandingPage() {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 70 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -90 }}
-            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0, y: -500, rotate: -90 }}
+            animate={{ opacity: 1, y: 0, rotate: 0, }}
+            exit={{ opacity: 0, y: 0, rotate: 90  }}
+            transition={{ duration: 1 }}
         >
             <div
                 style={{
@@ -22,11 +22,21 @@ export default function LandingPage() {
                     height: '100vh',
                 }}
             >
-                <img
-                    src={logo}
-                    alt="Strobel Advogados Logo"
-                    style={{ maxWidth: '180px', marginBottom: '1em' }}
-                />
+            <motion.img
+                src={logo}
+                alt="Logo"
+                style={{ width: '180px', marginBottom: '1em' }}
+                animate={{
+                    rotate: [0, 10, -10, 10, -10, 0],
+                    scale: [1, 1.1, 1],
+                }}
+                transition={{
+                    duration: 9,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                }}
+            />
                 <h1>Strobel Advogados</h1>
             </div>
         </motion.div>
