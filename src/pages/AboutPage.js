@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import isabelle from '../assets/isabelle-strobel.png';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, transform } from 'framer-motion';
+import Logo from '../components/Logo';
 
 export default function AboutPage() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -29,6 +30,10 @@ export default function AboutPage() {
                 paddingBottom: '60px',
             }}
         >
+
+            <Logo
+            style={{position: 'fixed', right: 0, top: 10}}
+            />
             <div
                 style={{
                     display: 'flex',

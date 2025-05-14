@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo-strobel.svg';
+import Logo from '../components/Logo';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -22,21 +22,7 @@ export default function LandingPage() {
                     height: '100vh',
                 }}
             >
-            <motion.img
-                src={logo}
-                alt="Logo"
-                style={{ width: '180px', marginBottom: '1em' }}
-                animate={{
-                    rotate: [0, 10, -10, 10, -10, 0],
-                    scale: [1, 1.1, 1],
-                }}
-                transition={{
-                    duration: 9,
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    ease: "easeInOut",
-                }}
-            />
+                <Logo />
                 <h1>Strobel Advocacia</h1>
             </div>
         </motion.div>

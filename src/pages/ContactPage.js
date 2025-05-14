@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Logo from '../components/Logo';
 
 export default function ContactPage() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -49,6 +50,12 @@ export default function ContactPage() {
                 paddingBottom: '60px',
             }}
         >
+
+        <Logo
+        style={{position: 'fixed', right: 0, top: 10}}
+        />
+
+
             <div
                 style={{
                     display: 'flex',
@@ -79,7 +86,8 @@ export default function ContactPage() {
                             fontSize: '16px',
                             border: '1px solid black',
                             borderRadius: '4px',
-                            width: '100%',
+                            width: '50%',
+                            margin: 'auto',
                         }}
                     />
                     <input
@@ -94,7 +102,8 @@ export default function ContactPage() {
                             fontSize: '16px',
                             border: '1px solid black',
                             borderRadius: '4px',
-                            width: '100%',
+                            width: '50%',
+                            margin: 'auto',
                         }}
                     />
                     <textarea
@@ -109,7 +118,9 @@ export default function ContactPage() {
                             fontSize: '16px',
                             border: '1px solid black',
                             borderRadius: '4px',
-                            width: '100%',
+                            width: isMobile ? '90%' : '100%',
+                            maxWidth: '100%',
+                            margin: 'auto',
                         }}
                     />
                     <button
@@ -122,6 +133,7 @@ export default function ContactPage() {
                             fontSize: '16px',
                             cursor: 'pointer',
                             borderRadius: '4px',
+                            margin: 'auto'
                         }}
                     >
                         Enviar

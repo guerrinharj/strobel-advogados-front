@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Logo from '../components/Logo';
 
 export default function AtuacaoPage() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -28,6 +29,11 @@ export default function AtuacaoPage() {
                 paddingBottom: '60px',
             }}
         >
+
+        <Logo
+        style={{position: 'fixed', right: 0, top: 10}}
+        />
+
             <div
                 style={{
                     display: 'flex',
@@ -45,7 +51,7 @@ export default function AtuacaoPage() {
                 }}
             >
                 <div style={{ maxWidth: '600px' }}>
-                    <h1 style={{ fontSize: isMobile ? '20px' : '34px', marginBottom: '0.5em', textDecoration: 'underline' }}>
+                    <h1 style={{ fontSize: isMobile ? '28px' : '34px', marginBottom: '0.5em', textDecoration: 'underline' }}>
                         Áreas de Atuação
                     </h1>
 
