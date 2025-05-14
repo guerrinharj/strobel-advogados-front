@@ -26,7 +26,7 @@ export default function Navbar() {
                 Home
             </Link>
             <Link
-                to="/about"
+                to="/sobre"
                 style={{
                     textDecoration: 'none',
                     color: location.pathname === '/about' ? 'white' : 'black',
@@ -42,6 +42,15 @@ export default function Navbar() {
                 }}
             >
                 Atuação
+            </Link>
+            <Link
+                to="/contato"
+                style={{
+                    textDecoration: 'none',
+                    color: location.pathname === '/about' ? 'white' : 'black',
+                }}
+            >
+                Contato
             </Link>
         </nav>
     );

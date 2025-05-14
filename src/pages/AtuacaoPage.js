@@ -49,25 +49,27 @@ export default function AtuacaoPage() {
                         Áreas de Atuação
                     </h1>
 
-                    <h2>Direito Constitucional</h2>
-                    <p style={{ fontSize: isMobile ? '14px' : '18px', lineHeight: '1.6' }}>
-                        • Elaboração de pareceres técnicos, ações diretas de inconstitucionalidade, mandados de segurança e habeas corpus.
-                    </p>
-
-                    <h2>Direito Administrativo</h2>
-                    <p style={{ fontSize: isMobile ? '14px' : '18px', lineHeight: '1.6' }}>
+                    <h2 style={{ fontSize: isMobile ? '18px' : '26px' }}>
+                        Direito Administrativo
+                    </h2>
+                    <p style={{ fontSize: isMobile ? '16px' : '18px', lineHeight: '1.6' }}>
                         • Atuação em processos licitatórios, contratos públicos, improbidade administrativa, defesa de servidores públicos.
                     </p>
 
-                    <h2>Direito Civil e Empresarial</h2>
-                    <p style={{ fontSize: isMobile ? '14px' : '18px', lineHeight: '1.6' }}>
+                    <h2 style={{ fontSize: isMobile ? '18px' : '26px' }}>
+                        Direito Civil e Empresarial
+                    </h2>
+                    <p style={{ fontSize: isMobile ? '16px' : '18px', lineHeight: '1.6' }}>
                         • Consultoria, litígios contratuais, responsabilidade civil, direito societário.
                     </p>
 
-                    <h2>Direito Digital</h2>
-                    <p style={{ fontSize: isMobile ? '14px' : '18px', lineHeight: '1.6' }}>
+                    <h2 style={{ fontSize: isMobile ? '18px' : '26px' }}>
+                        Direito Digital
+                    </h2>
+                    <p style={{ fontSize: isMobile ? '16px' : '18px', lineHeight: '1.6' }}>
                         • LGPD, proteção de dados, compliance digital, e-commerce e contratos tecnológicos.
                     </p>
+
                 </div>
             </div>
         </motion.div>
