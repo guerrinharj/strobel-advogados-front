@@ -25,7 +25,7 @@ export default function ContactPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const mailtoLink = `mailto:atendimento@strobeladvocacia.com?subject=Contato de ${encodeURIComponent(
+        const mailtoLink = `mailto:gabriel@strobeladvocacia.com?subject=Contato de ${encodeURIComponent(
             form.name
         )}&body=Nome: ${encodeURIComponent(form.name)}%0D%0AEmail: ${encodeURIComponent(
             form.email
