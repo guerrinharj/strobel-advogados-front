@@ -34,6 +34,7 @@ export default function AboutPage() {
             <Logo
             style={{position: 'fixed', right: 0, top: 10}}
             />
+            
             <div
                 style={{
                     display: 'flex',

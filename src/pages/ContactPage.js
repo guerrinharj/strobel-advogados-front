@@ -62,8 +62,6 @@ export default function ContactPage() {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    padding: '0 2em',
-                    paddingBottom: '60px',
                     textAlign: 'left',
                     maxWidth: isMobile ? '90vw' : '500px',
                     width: '100%',
