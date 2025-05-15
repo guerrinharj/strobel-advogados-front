@@ -56,24 +56,18 @@ export default function AtuacaoPage() {
                     </h1>
 
                     <h2 style={{ fontSize: isMobile ? '18px' : '26px' }}>
-                        Direito Administrativo
+                        Direito Civil e do Consumidor
                     </h2>
                     <p style={{ fontSize: isMobile ? '16px' : '18px', lineHeight: '1.6' }}>
-                        • Atuação em processos licitatórios, contratos públicos, improbidade administrativa, defesa de servidores públicos.
-                    </p>
+                        • Atuação em litígios envolvendo companhias aéreas (cancelamentos, overbooking, extravio de bagagem) e plataformas digitais (remoção de conteúdo, bloqueios indevidos, uso indevido de dados). Defesa dos direitos do consumidor e responsabilização civil.
 
-                    <h2 style={{ fontSize: isMobile ? '18px' : '26px' }}>
-                        Direito Civil e Empresarial
-                    </h2>
-                    <p style={{ fontSize: isMobile ? '16px' : '18px', lineHeight: '1.6' }}>
-                        • Consultoria, litígios contratuais, responsabilidade civil, direito societário.
-                    </p>
 
-                    <h2 style={{ fontSize: isMobile ? '18px' : '26px' }}>
-                        Direito Digital
-                    </h2>
-                    <p style={{ fontSize: isMobile ? '16px' : '18px', lineHeight: '1.6' }}>
-                        • LGPD, proteção de dados, compliance digital, e-commerce e contratos tecnológicos.
+
+
+
+
+
+
                     </p>
 
                 </div>
