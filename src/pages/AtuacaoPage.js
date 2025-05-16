@@ -2,6 +2,34 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Logo from '../components/Logo';
 
+const atuacoes = [
+    {
+        title: 'Arbitragem',
+        description:
+            '• Representação de clientes em procedimentos arbitrais nacionais e internacionais. Atuação em disputas complexas, especialmente nas áreas contratual, societária e empresarial. Elaboração de convenções de arbitragem e suporte técnico ao longo de todo o procedimento.',
+    },
+    {
+        title: 'Contencioso',
+        description:
+            '• Atuação estratégica em processos judiciais e arbitrais, com foco na resolução de conflitos cíveis, empresariais e contratuais. Elaboração de peças processuais, sustentações orais e acompanhamento em todas as instâncias.',
+    },
+    {
+        title: 'Contencioso Societário',
+        description:
+            '• Atuação em disputas entre sócios, dissolução de sociedades, apuração de haveres e conflitos societários. Representação em ações judiciais e arbitragens envolvendo questões de governança e responsabilidade de administradores.',
+    },
+    {
+        title: 'Direito Civil e do Consumidor',
+        description:
+            '• Atuação em litígios envolvendo companhias aéreas (cancelamentos, overbooking, extravio de bagagem) e plataformas digitais (remoção de conteúdo, bloqueios indevidos, uso indevido de dados). Defesa dos direitos do consumidor e responsabilização civil.',
+    },
+    {
+        title: 'Propriedade Intelectual',
+        description:
+            '• Registro e proteção de marcas, direitos autorais e patentes. Atuação em casos de uso indevido de imagem, nome ou conteúdo nas redes sociais e em plataformas digitais. Defesa judicial e extrajudicial dos direitos intelectuais.',
+    },
+];
+
 export default function AtuacaoPage() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -25,14 +53,10 @@ export default function AtuacaoPage() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
-                height: '100vh',
                 paddingBottom: '60px',
             }}
         >
-
-        <Logo
-        style={{position: 'fixed', right: 0, top: 10}}
-        />
+            <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
 
             <div
                 style={{
@@ -55,21 +79,12 @@ export default function AtuacaoPage() {
                         Áreas de Atuação
                     </h1>
 
-                    <h2 style={{ fontSize: isMobile ? '18px' : '26px' }}>
-                        Direito Civil e do Consumidor
-                    </h2>
-                    <p style={{ fontSize: isMobile ? '16px' : '18px', lineHeight: '1.6' }}>
-                        • Atuação em litígios envolvendo companhias aéreas (cancelamentos, overbooking, extravio de bagagem) e plataformas digitais (remoção de conteúdo, bloqueios indevidos, uso indevido de dados). Defesa dos direitos do consumidor e responsabilização civil.
-
-
-
-
-
-
-
-
-                    </p>
-
+                    {atuacoes.map((area, index) => (
+                        <div key={index}>
+                            <h2 style={{ fontSize: isMobile ? '18px' : '26px' }}>{area.title}</h2>
+                            <p style={{ fontSize: isMobile ? '16px' : '18px', lineHeight: '1.6' }}>{area.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </motion.div>

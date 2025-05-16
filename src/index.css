@@ -5,8 +5,7 @@ body {
     font-family: 'Helvetica', sans-serif;
     color: black;
     letter-spacing: -1px;
-    overflow: hidden;
-    height: 100vh
+    overflow-x: hidden;
 }
 
 .app {
