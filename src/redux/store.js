@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+import atuacoesReducer from './atuacoesSlice';
+import aboutReducer from './aboutSlice';
 
 export const store = configureStore({
     reducer: {
-        // Add your reducers here when needed
+        atuacoes: atuacoesReducer,
+        about: aboutReducer,
     },
 });
