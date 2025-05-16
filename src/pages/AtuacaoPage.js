@@ -35,7 +35,7 @@ export default function AtuacaoPage() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
-                padding: '2em 2em 80px',
+                padding: '2em',
             }}
         >
             <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
@@ -48,7 +48,6 @@ export default function AtuacaoPage() {
                     alignItems: 'center',
                     height: '100vh',
                     padding: '0 2em',
-                    paddingBottom: '60px',
                     textAlign: isMobile ? 'center' : 'left',
                     width: isMobile ? '90vw' : '600px',
                     margin: 'auto',
