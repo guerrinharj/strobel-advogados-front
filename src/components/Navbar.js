@@ -42,6 +42,9 @@ export default function Navbar() {
             style={{
                 position: 'fixed',
                 bottom: 20,
+                backgroundColor: 'skyblue',
+                padding: '0.5em 1em',
+                border: 'dashed 1px black',
                 left: '50%',
                 transform: 'translateX(-50%)',
                 display: 'flex',

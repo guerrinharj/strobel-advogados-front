@@ -44,104 +44,49 @@ export default function ContactPage() {
             style={{
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'center',
                 alignItems: 'center',
+                padding: '2em',
+                paddingBottom: '80px',
+                minHeight: '100vh',
                 textAlign: 'center',
-                height: '100vh',
-                paddingBottom: '60px',
             }}
         >
 
-        <Logo
-        style={{position: 'fixed', right: 0, top: 10}}
-        />
+            <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
 
+                <h1 style={{ fontSize: isMobile ? '24px' : '36px', marginBottom: '1em', textDecoration: 'underline' }}>
+                    Contato
+                </h1>
 
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'left',
-                    maxWidth: isMobile ? '90vw' : '500px',
-                    width: '100%',
-                    margin: 'auto',
-                    gap: '1em',
-                }}
-            >
-                <h1 style={{ fontSize: isMobile ? '20px' : '34px' }}>Fale Conosco</h1>
-
-                <form onSubmit={handleSubmit} style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '1em' }}>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Seu nome"
-                        value={form.name}
-                        onChange={handleChange}
-                        required
+                <div style={{ marginTop: '2em', textAlign: 'center' }}>
+                    <a
+                        href="mailto:gabrielguerra@strobeladvocacia.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         style={{
-                            padding: '0.75em',
+                            color: 'black',
+                            textDecoration: 'underline',
                             fontSize: '16px',
-                            border: '1px solid black',
-                            borderRadius: '4px',
-                            width: '50%',
-                            margin: 'auto',
-                        }}
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Seu email"
-                        value={form.email}
-                        onChange={handleChange}
-                        required
-                        style={{
-                            padding: '0.75em',
-                            fontSize: '16px',
-                            border: '1px solid black',
-                            borderRadius: '4px',
-                            width: '50%',
-                            margin: 'auto',
-                        }}
-                    />
-                    <textarea
-                        name="message"
-                        placeholder="Sua mensagem"
-                        rows={5}
-                        value={form.message}
-                        onChange={handleChange}
-                        required
-                        style={{
-                            padding: '0.75em',
-                            fontSize: '16px',
-                            border: '1px solid black',
-                            borderRadius: '4px',
-                            width: isMobile ? '90%' : '100%',
-                            maxWidth: '100%',
-                            margin: 'auto',
-                        }}
-                    />
-                    <button
-                        type="submit"
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
-                        style={{
-                            backgroundColor: isHovered ? 'white' : 'black',
-                            color: isHovered ? 'black' : 'white',
-                            border: '1px solid black',
-                            padding: '0.75em',
-                            fontSize: '16px',
-                            cursor: 'pointer',
-                            borderRadius: '4px',
-                            margin: 'auto',
-                            transition: 'all 0.3s ease',
                         }}
                     >
-                        Enviar
-                    </button>
-                </form>
-            </div>
+                        <h2 style={{ fontSize: '24px', marginBottom: '0.5em' }}>Email</h2>
+                    </a>
+                </div>
+
+                <div style={{ textAlign: 'center' }}>
+                    <a
+                        href="https://wa.me/5521999999999?text=Olá,%20gostaria%20de%20falar%20com%20vocês!"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            color: 'black',
+                            textDecoration: 'underline',
+                            fontSize: '16px',
+                        }}
+                    >
+                        <h2 style={{ fontSize: '24px', marginBottom: '0.5em' }}>WhatsApp</h2>
+                    </a>
+                </div>
         </motion.div>
     );
 }
