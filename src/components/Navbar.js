@@ -45,7 +45,7 @@ export default function Navbar() {
                 left: '50%',
                 transform: 'translateX(-50%)',
                 display: 'flex',
-                gap: isMobile ? '1em' : '2em',
+                gap: isMobile ? '1.3em' : '2em',
                 zIndex: 1000,
             }}
         >

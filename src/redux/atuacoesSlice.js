@@ -35,7 +35,7 @@ const initialState = [
         description: 'Atuação em contratos de licenciamento, cessão de direitos autorais, produções audiovisuais e proteção jurídica de artistas, produtores e influenciadores.',
     },
     {
-        title: 'Planejamento Patrimonial e Sucessório',
+        title: 'Planejamento Patrimonial',
         description: 'Estruturação de planejamentos sucessórios, testamentos, doações, criação de holdings familiares e blindagem patrimonial, visando segurança jurídica e eficiência fiscal.',
     },
     {
