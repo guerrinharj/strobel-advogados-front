@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
     const location = useLocation();
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const linkStyle = {
         position: 'relative',
         textDecoration: 'none',
         color: 'black',
         paddingBottom: '4px',
+        fontSize: isMobile ? '0.75rem' : '1rem',
         transition: 'color 0.3s ease',
     };
 
@@ -37,7 +45,7 @@ export default function Navbar() {
                 left: '50%',
                 transform: 'translateX(-50%)',
                 display: 'flex',
-                gap: '2em',
+                gap: isMobile ? '1em' : '2em',
                 zIndex: 1000,
             }}
         >
@@ -61,13 +69,10 @@ export default function Navbar() {
                         style={{
                             ...underlineStyle,
                             transform:
-                                location.pathname === to
-                                    ? 'scaleX(1)'
-                                    : 'scaleX(0)',
+                                location.pathname === to ? 'scaleX(1)' : 'scaleX(0)',
                         }}
                     />
                 </Link>
-
             ))}
         </nav>
     );
