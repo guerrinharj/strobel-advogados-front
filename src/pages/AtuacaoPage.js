@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useSelector } from 'react-redux';
 import Logo from '../components/Logo';
 
 export default function AtuacaoPage() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [openIndexes, setOpenIndexes] = useState({});
     const atuacoes = useSelector((state) => state.atuacoes);
 
     useEffect(() => {
@@ -14,6 +15,13 @@ export default function AtuacaoPage() {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    const toggleIndex = (index) => {
+        setOpenIndexes((prev) => ({
+            ...prev,
+            [index]: !prev[index],
+        }));
+    };
 
     return (
         <motion.div
@@ -36,19 +44,20 @@ export default function AtuacaoPage() {
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'center',
+                    justifyContent: 'flex-start',
                     alignItems: 'center',
                     height: '100vh',
                     padding: '0 2em',
                     paddingBottom: '60px',
                     textAlign: isMobile ? 'center' : 'left',
-                    maxWidth: isMobile ? '90vw' : '70vw',
+                    width: isMobile ? '90vw' : '600px',
                     margin: 'auto',
-                    gap: '2em',
                     lineHeight: '1.5',
+                    boxSizing: 'border-box',
+                    overflow: 'hidden',
                 }}
             >
-                <div style={{ maxWidth: '600px' }}>
+                <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
                     <h1
                         style={{
                             fontSize: isMobile ? '28px' : '34px',
@@ -59,14 +68,69 @@ export default function AtuacaoPage() {
                         Áreas de Atuação
                     </h1>
 
-                    {atuacoes.map((area, index) => (
-                        <div key={index}>
-                            <h2 style={{ fontSize: isMobile ? '18px' : '26px' }}>{area.title}</h2>
-                            <p style={{ fontSize: isMobile ? '16px' : '18px', lineHeight: '1.6' }}>
-                                {area.description}
-                            </p>
-                        </div>
-                    ))}
+                    <ul
+                        style={{
+                            listStyle: 'none',
+                            padding: 0,
+                            margin: 0,
+                            overflowY: 'auto',
+                            flex: 1,
+                            paddingRight: '0.5em',
+                        }}
+                    >
+                        {atuacoes.map((area, index) => (
+                            <li key={index} style={{ marginBottom: '1em' }}>
+                                <h2
+                                    onClick={() => toggleIndex(index)}
+                                    style={{
+                                        fontSize: isMobile ? '18px' : '26px',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'space-between',
+                                        gap: '0.5em',
+                                        wordBreak: 'break-word',
+                                    }}
+                                >
+                                    {area.title}
+                                    <span
+                                        style={{
+                                            display: 'inline-block',
+                                            transition: 'transform 0.2s ease',
+                                            transform: openIndexes[index] ? 'rotate(180deg)' : 'rotate(0deg)',
+                                            minWidth: '20px',
+                                        }}
+                                    >
+                                        .
+                                    </span>
+                                </h2>
+
+                                <AnimatePresence initial={false}>
+                                    {openIndexes[index] && (
+                                        <motion.div
+                                            key="content"
+                                            initial={{ opacity: 0, height: 0 }}
+                                            animate={{ opacity: 1, height: 'auto' }}
+                                            exit={{ opacity: 0, height: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            style={{ overflow: 'hidden' }}
+                                        >
+                                            <p
+                                                style={{
+                                                    fontSize: isMobile ? '16px' : '18px',
+                                                    lineHeight: '1.6',
+                                                    marginTop: '0.5em',
+                                                    textAlign: 'left'
+                                                }}
+                                            >
+                                                {area.description}
+                                            </p>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </motion.div>
