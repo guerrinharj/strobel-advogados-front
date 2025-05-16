@@ -4,6 +4,31 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Navbar() {
     const location = useLocation();
 
+    const linkStyle = {
+        position: 'relative',
+        textDecoration: 'none',
+        color: 'black',
+        paddingBottom: '4px',
+        transition: 'color 0.3s ease',
+    };
+
+    const activeStyle = {
+        color: 'black',
+    };
+
+    const underlineStyle = {
+        content: '""',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        height: '2px',
+        width: '100%',
+        backgroundColor: 'black',
+        transform: 'scaleX(0)',
+        transformOrigin: 'left',
+        transition: 'transform 0.3s ease',
+    };
+
     return (
         <nav
             style={{
@@ -16,33 +41,31 @@ export default function Navbar() {
                 zIndex: 1000,
             }}
         >
-            <Link
-                to="/sobre"
-                style={{
-                    textDecoration: 'none',
-                    color: location.pathname === '/about' ? 'white' : 'black',
-                }}
-            >
-                Sobre
-            </Link>
-            <Link
-                to="/areas-de-atuacao"
-                style={{
-                    textDecoration: 'none',
-                    color: location.pathname === '/about' ? 'white' : 'black',
-                }}
-            >
-                Atuação
-            </Link>
-            <Link
-                to="/contato"
-                style={{
-                    textDecoration: 'none',
-                    color: location.pathname === '/about' ? 'white' : 'black',
-                }}
-            >
-                Contato
-            </Link>
+            {[
+                { to: '/sobre', label: 'Sobre' },
+                { to: '/areas-de-atuacao', label: 'Atuação' },
+                { to: '/contato', label: 'Contato' },
+            ].map(({ to, label }) => (
+                <Link
+                    key={to}
+                    to={to}
+                    style={{
+                        ...linkStyle,
+                        ...(location.pathname === to ? activeStyle : {}),
+                    }}
+                >
+                    {label}
+                    <span
+                        style={{
+                            ...underlineStyle,
+                            transform:
+                                location.pathname === to
+                                    ? 'scaleX(1)'
+                                    : 'scaleX(0)',
+                        }}
+                    />
+                </Link>
+            ))}
         </nav>
     );
 }

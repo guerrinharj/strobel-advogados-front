@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Logo from '../components/Logo';
 
 export default function ContactPage() {
+    const [isHovered, setIsHovered] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [form, setForm] = useState({
         name: '',
@@ -123,15 +124,18 @@ export default function ContactPage() {
                     />
                     <button
                         type="submit"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
                         style={{
-                            backgroundColor: 'black',
-                            color: 'white',
-                            border: 'none',
+                            backgroundColor: isHovered ? 'white' : 'black',
+                            color: isHovered ? 'black' : 'white',
+                            border: '1px solid black',
                             padding: '0.75em',
                             fontSize: '16px',
                             cursor: 'pointer',
                             borderRadius: '4px',
-                            margin: 'auto'
+                            margin: 'auto',
+                            transition: 'all 0.3s ease',
                         }}
                     >
                         Enviar
