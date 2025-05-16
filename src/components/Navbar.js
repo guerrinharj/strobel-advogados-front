@@ -17,15 +17,6 @@ export default function Navbar() {
             }}
         >
             <Link
-                to="/"
-                style={{
-                    textDecoration: 'none',
-                    color: location.pathname === '/' ? 'white' : 'black',
-                }}
-            >
-                Home
-            </Link>
-            <Link
                 to="/sobre"
                 style={{
                     textDecoration: 'none',
