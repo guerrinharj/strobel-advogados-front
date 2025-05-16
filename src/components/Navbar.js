@@ -16,7 +16,7 @@ export default function Navbar() {
         textDecoration: 'none',
         color: 'black',
         paddingBottom: '4px',
-        fontSize: isMobile ? '0.75rem' : '1rem',
+        fontSize: isMobile ? '0.95rem' : '1rem',
         transition: 'color 0.3s ease',
     };
 
