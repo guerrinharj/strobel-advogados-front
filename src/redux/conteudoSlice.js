@@ -5,12 +5,6 @@ const conteudoSlice = createSlice({
     initialState: {
         items: [
         {
-            company: "Folha de São Paulo",
-            description: "Por que Juliette do BBB parece a tropa de choque bolsonarista?",
-            url: "https://www1.folha.uol.com.br/ilustrissima/2021/05/por-que-juliette-do-bbb-parece-a-tropa-de-choque-bolsonarista.shtml",
-            year: "2021"
-        },
-        {
             company: "GQ",
             description: "Saquinho de Lixo, coletivo criador de memes, por Wired Festival Creativex",
             url: "https://gq.globo.com/wired-festival-brasil/noticia/2020/11/saquinho-de-lixo-coletivo-criador-de-memes-por-wired-festival-creativex.ghtml",

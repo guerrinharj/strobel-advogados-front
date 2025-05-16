@@ -3,9 +3,12 @@ import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import Logo from '../components/Logo';
 
-export default function ConteudoPage() {
+// Import PDFs dynamically
+const pdfs = require.context('../assets/pdfs', false, /\.pdf$/);
+
+export default function PublicacoesPage() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-    const { items = [] } = useSelector((state) => state.conteudo);
+    const { items = [] } = useSelector((state) => state.publicacoes);
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -31,7 +34,7 @@ export default function ConteudoPage() {
         >
             <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
             <h1 style={{ fontSize: isMobile ? '24px' : '36px', marginBottom: '1em', textDecoration: 'underline' }}>
-                Conteúdo
+                Publicações
             </h1>
 
             <div style={{ maxWidth: '800px', width: '100%' }}>
@@ -61,7 +64,7 @@ export default function ConteudoPage() {
                                     onMouseEnter={(e) => (e.target.style.textDecoration = 'underline')}
                                     onMouseLeave={(e) => (e.target.style.textDecoration = 'none')}
                                 >
-                                    •  <i>"{item.description}"</i>
+                                    •  <i>"{item.title}"</i>
                                 </p>
                                 <p style={{ fontSize: isMobile ? '18px' : '24px', marginBottom: '0.5em' }}>
                                     <b>{item.company}</b>, <small>{item.year}</small>

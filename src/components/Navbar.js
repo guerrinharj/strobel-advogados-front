@@ -44,7 +44,8 @@ export default function Navbar() {
             {[
                 { to: '/sobre', label: 'Sobre' },
                 { to: '/areas-de-atuacao', label: 'Atuação' },
-                { to: '/conteudo', label: 'Conteúdo' }, // ✅ added link here
+                { to: '/publicacoes', label: 'Publicações' },
+                { to: '/conteudo', label: 'Conteúdo' },
                 { to: '/contato', label: 'Contato' },
             ].map(({ to, label }) => (
                 <Link
@@ -66,6 +67,7 @@ export default function Navbar() {
                         }}
                     />
                 </Link>
+
             ))}
         </nav>
     );

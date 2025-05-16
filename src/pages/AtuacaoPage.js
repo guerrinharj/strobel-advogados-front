@@ -35,7 +35,7 @@ export default function AtuacaoPage() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
-                paddingBottom: '60px',
+                padding: '2em 2em 80px',
             }}
         >
             <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
@@ -60,9 +60,10 @@ export default function AtuacaoPage() {
                 <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
                     <h1
                         style={{
-                            fontSize: isMobile ? '28px' : '34px',
+                            fontSize: isMobile ? '28px' : '36px',
                             marginBottom: '0.5em',
                             textDecoration: 'underline',
+                            margin: 'auto'
                         }}
                     >
                         Áreas de Atuação
