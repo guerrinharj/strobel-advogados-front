@@ -30,7 +30,18 @@ function App() {
                 <Route path="/contato" element={<ContactPage />} />
                 <Route path="/publicacoes" element={<PublicacoesPage />} />
             </Routes>
-            <Navbar />
+
+            <div
+                style={{
+                    position: 'fixed',
+                    bottom: 20,
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    zIndex: 1000,
+                }}
+            >
+                <Navbar />
+            </div>
         </div>
     );
 }

@@ -40,20 +40,18 @@ export default function Navbar() {
     return (
         <nav
             style={{
-                position: 'fixed',
-                bottom: 20,
-                left: '50%',
-                transform: 'translateX(-50%)',
                 display: 'flex',
-                gap: isMobile ? '1.3em' : '2em',
+                flexWrap: 'nowrap',
+                gap: isMobile ? '1em' : '2em',
                 backgroundColor: 'skyblue',
                 padding: '0.5em 1em',
                 border: 'dashed 1px black',
-                zIndex: 1000,
-                maxWidth: '100vw',
-                flexWrap: 'wrap',
-        }}
+                whiteSpace: 'nowrap',
+                overflowX: 'auto',
+                borderRadius: '12px',
+            }}
         >
+
             {[
                 { to: '/sobre', label: 'Sobre' },
                 { to: '/areas-de-atuacao', label: 'Atuação' },
