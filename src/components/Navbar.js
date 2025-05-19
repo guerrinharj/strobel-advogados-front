@@ -42,15 +42,17 @@ export default function Navbar() {
             style={{
                 position: 'fixed',
                 bottom: 20,
-                backgroundColor: 'skyblue',
-                padding: '0.5em 1em',
-                border: 'dashed 1px black',
                 left: '50%',
                 transform: 'translateX(-50%)',
                 display: 'flex',
                 gap: isMobile ? '1.3em' : '2em',
+                backgroundColor: 'skyblue',
+                padding: '0.5em 1em',
+                border: 'dashed 1px black',
                 zIndex: 1000,
-            }}
+                maxWidth: '100vw',
+                flexWrap: 'wrap',
+        }}
         >
             {[
                 { to: '/sobre', label: 'Sobre' },
