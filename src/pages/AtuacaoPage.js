@@ -33,13 +33,10 @@ export default function AtuacaoPage() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                padding: '2em',
-                paddingBottom: '80px',
                 minHeight: '100vh',
                 textAlign: 'center',
             }}
         >
-            <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
 
             <div
                 style={{

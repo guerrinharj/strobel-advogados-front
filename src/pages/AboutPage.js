@@ -39,8 +39,6 @@ export default function AboutPage() {
                     justifyContent: 'center',
                     alignItems: 'center',
                     height: '100vh',
-                    padding: '0 2em',
-                    paddingBottom: '60px',
                     textAlign: isMobile ? 'center' : 'left',
                     maxWidth: isMobile ? '90vw' : '70vw',
                     margin: 'auto',

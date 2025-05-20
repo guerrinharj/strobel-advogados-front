@@ -26,13 +26,10 @@ export default function PublicacoesPage() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                padding: '2em',
-                paddingBottom: '80px',
                 minHeight: '100vh',
                 textAlign: 'center',
             }}
         >
-            <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
             <h1 style={{ fontSize: isMobile ? '24px' : '36px', marginBottom: '1em', textDecoration: 'underline' }}>
                 Publicações
             </h1>
