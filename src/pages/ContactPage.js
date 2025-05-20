@@ -45,8 +45,6 @@ export default function ContactPage() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                padding: '2em',
-                paddingBottom: '80px',
                 minHeight: '100vh',
                 textAlign: 'center',
             }}

@@ -7,7 +7,7 @@ const publicacoesSlice = createSlice({
             {
                 company: 'Academia.edu',
                 title: 'A arte de buscar a verdade em Proust',
-                url: 'a_arte_de_rebuscar_a_verdade_em_proust.pdf',
+                url: 'https://www.academia.edu/9246066/A_arte_de_re_buscar_a_verdade_em_Proust',
                 year: 2022,
             },
         {

@@ -46,7 +46,7 @@ export default function AtuacaoPage() {
                     alignItems: 'center',
                     height: '100vh',
                     paddingTop: '20px',
-                    padding: '0 2em',
+                    padding: '1em',
                     textAlign: isMobile ? 'center' : 'left',
                     width: isMobile ? '90vw' : '600px',
                     margin: 'auto',
