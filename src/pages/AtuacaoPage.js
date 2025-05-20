@@ -45,6 +45,7 @@ export default function AtuacaoPage() {
                     justifyContent: 'flex-start',
                     alignItems: 'center',
                     height: '100vh',
+                    paddingTop: '20px',
                     padding: '0 2em',
                     textAlign: isMobile ? 'center' : 'left',
                     width: isMobile ? '90vw' : '600px',
