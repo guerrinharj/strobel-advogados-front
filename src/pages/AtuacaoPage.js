@@ -35,103 +35,82 @@ export default function AtuacaoPage() {
                 alignItems: 'center',
                 minHeight: '100vh',
                 textAlign: 'center',
+                padding: isMobile ? '' : '2em'
             }}
         >
+            <div style={{ display: isMobile ? 'none' : 'block' }} >
+                <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
+            </div>
 
-            <div
+            <h1 style={{ fontSize: isMobile ? '24px' : '36px', marginBottom: '1em', textDecoration: 'underline' }}>
+                Areas de Atuação
+            </h1>
+
+        <div style={{ width: isMobile ? '90%' : '60%', height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <ul
                 style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'flex-start',
-                    alignItems: 'center',
-                    height: '100vh',
-                    paddingTop: '20px',
-                    padding: '1em',
-                    textAlign: isMobile ? 'center' : 'left',
-                    width: isMobile ? '90vw' : '600px',
-                    margin: 'auto',
-                    lineHeight: '1.5',
-                    boxSizing: 'border-box',
-                    overflow: 'hidden',
+                    listStyle: 'none',
+                    padding: 0,
+                    margin: 0,
+                    overflowY: 'auto',
+                    flex: 1,
+                    paddingRight: '0.5em',
                 }}
             >
-                <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
-                    <h1
-                        style={{
-                            fontSize: isMobile ? '28px' : '36px',
-                            marginBottom: '0.5em',
-                            textDecoration: 'underline',
-                            margin: 'auto'
-                        }}
-                    >
-                        Áreas de Atuação
-                    </h1>
+                {atuacoes.map((area, index) => (
+                    <li key={index} style={{ marginBottom: '1em' }}>
+                        <h2
+                            onClick={() => toggleIndex(index)}
+                            style={{
+                                fontSize: isMobile ? '18px' : '26px',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                gap: '0.5em',
+                                wordBreak: 'break-word',
+                            }}
+                        >
+                            {area.title}
+                            <span
+                                style={{
+                                    display: 'inline-block',
+                                    transition: 'transform 0.2s ease',
+                                    transform: openIndexes[index] ? 'rotate(180deg)' : 'rotate(0deg)',
+                                    minWidth: '20px',
+                                }}
+                            >
+                                .
+                            </span>
+                        </h2>
 
-                    <ul
-                        style={{
-                            listStyle: 'none',
-                            padding: 0,
-                            margin: 0,
-                            overflowY: 'auto',
-                            flex: 1,
-                            paddingRight: '0.5em',
-                        }}
-                    >
-                        {atuacoes.map((area, index) => (
-                            <li key={index} style={{ marginBottom: '1em' }}>
-                                <h2
-                                    onClick={() => toggleIndex(index)}
-                                    style={{
-                                        fontSize: isMobile ? '18px' : '26px',
-                                        cursor: 'pointer',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'space-between',
-                                        gap: '0.5em',
-                                        wordBreak: 'break-word',
-                                    }}
+                        <AnimatePresence initial={false}>
+                            {openIndexes[index] && (
+                                <motion.div
+                                    key="content"
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: 'auto' }}
+                                    exit={{ opacity: 0, height: 0 }}
+                                    transition={{ duration: 0.3 }}
+                                    style={{ overflow: 'hidden' }}
                                 >
-                                    {area.title}
-                                    <span
+                                    <p
                                         style={{
-                                            display: 'inline-block',
-                                            transition: 'transform 0.2s ease',
-                                            transform: openIndexes[index] ? 'rotate(180deg)' : 'rotate(0deg)',
-                                            minWidth: '20px',
+                                            fontSize: isMobile ? '16px' : '18px',
+                                            lineHeight: '1.6',
+                                            marginTop: '0.5em',
+                                            textAlign: 'left'
                                         }}
                                     >
-                                        .
-                                    </span>
-                                </h2>
-
-                                <AnimatePresence initial={false}>
-                                    {openIndexes[index] && (
-                                        <motion.div
-                                            key="content"
-                                            initial={{ opacity: 0, height: 0 }}
-                                            animate={{ opacity: 1, height: 'auto' }}
-                                            exit={{ opacity: 0, height: 0 }}
-                                            transition={{ duration: 0.3 }}
-                                            style={{ overflow: 'hidden' }}
-                                        >
-                                            <p
-                                                style={{
-                                                    fontSize: isMobile ? '16px' : '18px',
-                                                    lineHeight: '1.6',
-                                                    marginTop: '0.5em',
-                                                    textAlign: 'left'
-                                                }}
-                                            >
-                                                {area.description}
-                                            </p>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
+                                        {area.description}
+                                    </p>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </li>
+                ))}
+            </ul>
+        </div>
         </motion.div>
     );
 }

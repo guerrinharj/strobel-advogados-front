@@ -30,7 +30,9 @@ export default function AboutPage() {
                 paddingBottom: '60px',
             }}
         >
-            <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
+            <div style={{ display: isMobile ? 'none' : 'block' }} >
+                <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
+            </div>
 
             <div
                 style={{

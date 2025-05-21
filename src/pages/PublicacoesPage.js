@@ -31,6 +31,12 @@ export default function PublicacoesPage() {
                 padding: isMobile ? '' : '2em'
             }}
         >
+
+            <div style={{ display: isMobile ? 'none' : 'block' }} >
+                <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
+            </div>
+
+            
             <h1 style={{ fontSize: isMobile ? '24px' : '36px', marginBottom: '1em', textDecoration: 'underline' }}>
                 Publicações
             </h1>
