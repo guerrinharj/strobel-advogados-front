@@ -25,6 +25,7 @@ export default function ConteudoPage() {
                 alignItems: 'center',
                 minHeight: '100vh',
                 textAlign: 'center',
+                padding: isMobile ? '' : '2em'
             }}
         >
             <h1 style={{ fontSize: isMobile ? '24px' : '36px', marginBottom: '1em', textDecoration: 'underline' }}>

@@ -47,6 +47,7 @@ export default function ContactPage() {
                 alignItems: 'center',
                 minHeight: '100vh',
                 textAlign: 'center',
+                padding: isMobile ? '' : '2em'
             }}
         >
 
