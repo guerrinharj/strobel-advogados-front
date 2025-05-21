@@ -65,7 +65,7 @@ export default function AboutPage() {
                     {paragraphs.map((text, idx) => (
                         <p
                             key={idx}
-                            style={{ fontSize: isMobile ? '14px' : '18px', lineHeight: '1.6' }}
+                            style={{ fontSize: isMobile ? '16px' : '18px', lineHeight: '1.6' }}
                             dangerouslySetInnerHTML={{ __html: `• ${text}` }}
                         />
                     ))}

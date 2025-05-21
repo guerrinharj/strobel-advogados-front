@@ -54,7 +54,7 @@ export default function ContactPage() {
                     Contato
                 </h1>
 
-                <div style={{ fontSize: isMobile ? '16px' : '24px', marginTop: '2em', textAlign: 'center' }}>
+                <div style={{  marginTop: '2em', textAlign: 'center' }}>
                     <a
                         href="mailto:gabrielguerra@strobeladvocacia.com"
                         target="_blank"
@@ -80,7 +80,7 @@ export default function ContactPage() {
                             fontSize: '16px',
                         }}
                     >
-                        <h2 style={{ fontSize: '24px', marginBottom: '0.5em' }}>WhatsApp</h2>
+                        <h2 style={{ fontSize: isMobile ? '16px' : '24px', marginBottom: '0.5em' }}>WhatsApp</h2>
                     </a>
                 </div>
         </motion.div>
