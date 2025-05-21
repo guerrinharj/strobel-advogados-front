@@ -50,13 +50,11 @@ export default function ContactPage() {
             }}
         >
 
-            <Logo style={{ position: 'fixed', right: 0, top: 10 }} />
-
                 <h1 style={{ fontSize: isMobile ? '24px' : '36px', marginBottom: '1em', textDecoration: 'underline' }}>
                     Contato
                 </h1>
 
-                <div style={{ marginTop: '2em', textAlign: 'center' }}>
+                <div style={{ fontSize: isMobile ? '16px' : '24px', marginTop: '2em', textAlign: 'center' }}>
                     <a
                         href="mailto:gabrielguerra@strobeladvocacia.com"
                         target="_blank"
@@ -67,7 +65,7 @@ export default function ContactPage() {
                             fontSize: '16px',
                         }}
                     >
-                        <h2 style={{ fontSize: '24px', marginBottom: '0.5em' }}>Email</h2>
+                        <h2 style={{ fontSize: isMobile ? '16px' : '24px', marginBottom: '0.5em' }}>Email</h2>
                     </a>
                 </div>
 
